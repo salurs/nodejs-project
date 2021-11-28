@@ -1,0 +1,27 @@
+{
+  "name": "pcat",
+  "version": "1.0.0",
+  "description": "PCAT Photo App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salurs/nodejs-project.git"
+  },
+  "keywords": [
+    "nodejs",
+    "photo",
+    "app"
+  ],
+  "author": "Orhan SALUR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/salurs/nodejs-project/issues"
+  },
+  "homepage": "https://github.com/salurs/nodejs-project#readme",
+  "devDependencies": {
+    "prettier": "2.5.0"
+  }
+}
