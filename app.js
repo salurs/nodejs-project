@@ -1,27 +1,29 @@
 const express = require('express');
 const path = require('path');
+const ejs = require('ejs');
 
 const app = express();
 
-//static files
+//Template engine
+app.set('view engine', 'ejs');
+
+//Static files
 app.use(express.static('public'));
-app.use(express.static('template'));
 
+//Routes
 app.get('/', function (req, res) {
-    const photo = {
-        id: 1,
-        name: 'Photo name',
-        description: 'Photo description',
-    };
-    res.status(200).send(photo);
+    // res.sendFile(path.resolve(__dirname, 'template/index.html'));
+    res.render('index');
+});
+app.get('/about', function (req, res) {
+    res.render('about');
+});
+app.get('/add-photo', function (req, res) {
+    res.render('add');
 });
 
-app.get('/index', function (req, res) {
-    res.sendFile(path.resolve(__dirname,'template/index.html'));
-});
 
 const port = 3000;
 app.listen(port, () => {
-    console.log(__dirname);
     console.log(`Server start on ${port} port.`);
 });
